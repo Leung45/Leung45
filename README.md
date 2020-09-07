@@ -1,12 +1,16 @@
 # Profile
 
-* Name: 陈志亮
+* Name : Chen Zhiliang
 
-* College: GDUT
+* College : GDUT
 
-* Major: Network Engineering
+* Major : Network Engineering
 
-* Contact: 2719791520@qq.com
+* Tech : Java backend development
+
+* Contact : 2719791520@qq.com
+
+* Hobby : Table tennis
 
 <!--
 **Leung45/Leung45** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
