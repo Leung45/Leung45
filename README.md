@@ -1,8 +1,13 @@
-### Profile
+# Profile
+
 * Name: 陈志亮
+
 * College: GDUT
+
 * Major: Network Engineering
+
 * Contact: 2719791520@qq.com
+
 <!--
 **Leung45/Leung45** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
