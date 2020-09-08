@@ -1,6 +1,6 @@
 # Profile
 
-* Name : Chen Zhiliang
+* Name : Zhiliang Chen
 
 * Language : Chinese,Cantonese,English
 
