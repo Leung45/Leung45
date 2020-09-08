@@ -2,6 +2,8 @@
 
 * Name : Chen Zhiliang
 
+* Language : Chinese,Cantonese,English
+
 * College : GDUT
 
 * Major : Network Engineering
@@ -10,7 +12,7 @@
 
 * Contact : 2719791520@qq.com
 
-* Hobby : Table tennis
+* Hobby : History,Geography,Politics,Table tennis,etc
 
 <!--
 **Leung45/Leung45** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
