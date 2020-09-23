@@ -7,12 +7,6 @@ import org.wltea.analyzer.core.IKSegmenter;
 import org.wltea.analyzer.core.Lexeme;
 
 public class DissertationChecker {
-    public static void main(String[] args) throws Exception{
-        File file1 = new File("C:\\SEPersonalProjectCZL\\src\\textse\\orig.txt");
-        File file2 = new File("C:\\SEPersonalProjectCZL\\src\\textse\\orig_0.8_add.txt");
-
-        System.out.println(getCheckedResult(file1,file2));
-    }
 
     public static double getCheckedResult(File file1,File file2) throws IOException{
         StringBuilder strBuilder1 = new StringBuilder();
