@@ -18,8 +18,8 @@ public class DissertationCheck {
         File file1 = new File(filePathList.get(0));
         File file2 = new File(filePathList.get(1));
 
-        //获取查重结果
-        double result = DissertationChecker.getCheckedResult(file1,file2);
+        DissertationCheckerImpl dissertationChecker = new DissertationCheckerImpl();
+        double result = dissertationChecker.getCheckedResult(file1,file2);
 
         //输出查重结果
         System.out.println();
@@ -56,15 +56,15 @@ public class DissertationCheck {
     //保存论文查重结果文件
     public static void saveResult(double result) throws IOException{
         //新建文件夹
-        File resultFolder = new File("C:"+File.separator+"checkResultFolder");
+        File resultFolder = new File("src"+File.separator+"testResultFolder");
         if(!resultFolder.exists()) resultFolder.mkdirs();
 
         //新建文件
-        File resultFile = new File("C:"+File.separator+"checkResultFolder"+File.separator+"checkResult.txt");
+        File resultFile = new File("src"+File.separator+"testResultFolder"+File.separator+"checkResult.txt");
         if(!resultFile.exists()) resultFile.createNewFile();
 
         //文件设置为可续写，字符集采用utf-8
-        OutputStreamWriter save = new OutputStreamWriter(new FileOutputStream("C:"+File.separator+"checkResultFolder"+File.separator+"checkResult.txt",true),"utf-8");
+        OutputStreamWriter save = new OutputStreamWriter(new FileOutputStream("src"+File.separator+"testResultFolder"+File.separator+"checkResult.txt",true),"utf-8");
 
         //查重结果保存
         save.write("论文查重结果："+result+"\r\n");
@@ -73,7 +73,10 @@ public class DissertationCheck {
         //关闭输出流，释放相关资源
         save.close();
 
-        System.out.println("论文查重结果保存在：C:"+File.separator+"checkResultFolder"+File.separator+"checkResult.txt");
+        //获取项目路径
+        String projectPath = new File("").getCanonicalPath();
+
+        System.out.println("论文查重结果保存在："+projectPath+File.separator+"src"+File.separator+"testResultFolder"+File.separator+"checkResult.txt");
     }
 
 }
