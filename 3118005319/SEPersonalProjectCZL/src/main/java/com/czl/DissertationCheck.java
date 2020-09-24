@@ -15,6 +15,7 @@ import java.util.Scanner;
  * @date 2020 09 22
  */
 public class DissertationCheck {
+
     /**
      * 程序入口
      * @param args args数组按照索引依次是[原文文件] [抄袭版论文的文件] [答案文件]的路径
