@@ -18,11 +18,18 @@ public class DissertationCheck {
         File file1 = new File(filePathList.get(0));
         File file2 = new File(filePathList.get(1));
 
+        //获取查重结果
         double result = DissertationChecker.getCheckedResult(file1,file2);
+
+        //输出查重结果
+        System.out.println();
         System.out.println(">>论文查重结果："+result);
+
+        //保存论文查重结果文件
         saveResult(result);
     }
 
+    //界面
     public static void menu(){
         System.out.println("-------------------------------------------------------");
         System.out.println("                     >>论文查重<<                     ");
@@ -30,6 +37,7 @@ public class DissertationCheck {
         System.out.println();
     }
 
+    //获取文件位置
     public static List<String> getFilePath(){
         List<String> filePathList = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
@@ -45,6 +53,7 @@ public class DissertationCheck {
         return filePathList;
     }
 
+    //保存论文查重结果文件
     public static void saveResult(double result) throws IOException{
         //新建文件夹
         File resultFolder = new File("C:"+File.separator+"checkResultFolder");
@@ -57,9 +66,12 @@ public class DissertationCheck {
         //文件设置为可续写，字符集采用utf-8
         OutputStreamWriter save = new OutputStreamWriter(new FileOutputStream("C:"+File.separator+"checkResultFolder"+File.separator+"checkResult.txt",true),"utf-8");
 
-        save.write("论文查重结果："+result+"\r\n");//查重结果保存
-        save.flush();//刷新输出流，缓冲的输出字节被写出
-        save.close();//关闭输出流，释放相关资源
+        //查重结果保存
+        save.write("论文查重结果："+result+"\r\n");
+        //刷新输出流，缓冲的输出字节被写出
+        save.flush();
+        //关闭输出流，释放相关资源
+        save.close();
 
         System.out.println("论文查重结果保存在：C:"+File.separator+"checkResultFolder"+File.separator+"checkResult.txt");
     }
