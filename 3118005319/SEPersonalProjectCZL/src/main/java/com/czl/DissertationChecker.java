@@ -19,3 +19,4 @@ public interface DissertationChecker {
     double getCheckedResult(File file1, File file2) throws IOException;
 
 }
+
