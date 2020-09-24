@@ -6,10 +6,16 @@ import org.junit.jupiter.api.Timeout;
 import java.io.File;
 import java.io.IOException;
 
-//超时测试
+/**
+ * @author CZL
+ * @date 2020 09 24
+ */
 public class TimeoutTest {
 
-    //测试确保程序单次论文查重中耗时低于5秒
+    /**
+     * 超时测试，测试确保程序单次论文查重中耗时低于5秒
+     * @throws IOException
+     */
     @Test
     @Timeout(5)
     public void testExample1() throws IOException {

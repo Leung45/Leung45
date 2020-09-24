@@ -6,8 +6,19 @@ import java.util.*;
 import org.wltea.analyzer.core.IKSegmenter;
 import org.wltea.analyzer.core.Lexeme;
 
+/**
+ * @author CZL
+ * @date 2020 09 22
+ */
 public class DissertationCheckerImpl implements DissertationChecker{
-    //获取查重结果
+
+    /**
+     * 获取查重结果
+     * @param file1
+     * @param file2
+     * @return 查重率
+     * @throws IOException
+     */
     @Override
     public double getCheckedResult(File file1,File file2) throws IOException{
         //读取文件内容到StringBuilder
@@ -26,7 +37,12 @@ public class DissertationCheckerImpl implements DissertationChecker{
         return cosAlgoCheck(list1,list2);
     }
 
-    //读取文件内容
+    /**
+     * 读取文件内容
+     * @param strBuilder
+     * @param file
+     * @return 存储文件内容的StringBuilder
+     */
     public static StringBuilder readFileData(StringBuilder strBuilder,File file){
         //使用BufferedReader提高读取效率
         BufferedReader buffReader = null;
@@ -53,7 +69,12 @@ public class DissertationCheckerImpl implements DissertationChecker{
         return strBuilder;
     }
 
-    //切词方法
+    /**
+     * 切词方法--IK切词
+     * @param strBuilder
+     * @return 分词的集合
+     * @throws IOException
+     */
     public static List<String> divideText(StringBuilder strBuilder) throws IOException{
         //转为StringReader处理
         String totalStr = strBuilder.toString();
@@ -72,7 +93,12 @@ public class DissertationCheckerImpl implements DissertationChecker{
         return list;
     }
 
-    //利用余弦相似查重
+    /**
+     * 余弦算法
+     * @param list1 文件
+     * @param list2 文件
+     * @return 查重率
+     */
     public static double cosAlgoCheck(List<String> list1, List<String> list2) {
         //非空判断
         if ( list1==null || list2==null || list1.size()==0 || list2.size()==0 ) {
@@ -133,7 +159,11 @@ public class DissertationCheckerImpl implements DissertationChecker{
         return cos;
     }
 
-    //计算分词的频数
+    /**
+     * 计算分词的频数
+     * @param list
+     * @return 分词及其频数的键值对集合
+     */
     private static Map<String, Integer> calSegFreq(List<String> list) {
         Map<String, Integer> segFreq = new HashMap<>();
         for (String segment : list) {

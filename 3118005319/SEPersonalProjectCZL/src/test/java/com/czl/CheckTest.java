@@ -5,9 +5,16 @@ import org.junit.jupiter.api.Test;
 import java.io.File;
 import java.io.IOException;
 
-//测试样例
+/**
+ * @author CZL
+ * @date 2020 09 24
+ */
 public class CheckTest {
 
+    /**
+     * 样例测试
+     * @throws IOException
+     */
     @Test
     public void testResources() throws IOException {
 

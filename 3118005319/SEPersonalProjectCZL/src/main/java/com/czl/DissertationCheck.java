@@ -8,6 +8,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * @author CZL
+ * @date 2020 09 22
+ */
 public class DissertationCheck {
     public static void main(String[] args) throws IOException {
         //界面
@@ -29,7 +33,9 @@ public class DissertationCheck {
         saveResult(result);
     }
 
-    //界面
+    /**
+     * 界面函数
+     */
     public static void menu(){
         System.out.println("-------------------------------------------------------");
         System.out.println("                     >>论文查重<<                     ");
@@ -37,7 +43,10 @@ public class DissertationCheck {
         System.out.println();
     }
 
-    //获取文件位置
+    /**
+     * 获取文件位置
+     * @return 文件路径集合
+     */
     public static List<String> getFilePath(){
         List<String> filePathList = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
@@ -53,7 +62,11 @@ public class DissertationCheck {
         return filePathList;
     }
 
-    //保存论文查重结果文件
+    /**
+     * 保存论文查重结果文件
+     * @param result 查重结果
+     * @throws IOException
+     */
     public static void saveResult(double result) throws IOException{
         //新建文件夹
         File resultFolder = new File("src"+File.separator+"testResultFolder");
